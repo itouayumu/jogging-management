@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+h1{
+    margin-left: 10em;
+}
+
+
+.form{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+
+.form div{
+    font-size: 1.2em;
+}
+
+.area input{
+    width: 30em;
+}
+
+.img{
+    width: 5.6em;
+}
+.img-bg{
+    background-color: gray;
+}
+.img_display{
+    width: 400px;
+    height: auto;
+}
+.flex{
+    display: flex;
+    justify-content: space-around;
+}
+td{
+    vertical-align: top;
+}
+.back{
+    margin: auto auto -2em auto;
+}
+.back button{
+    width: 5em;
+    height: 2.5em;
+    font-size: 15px;
+    cursor: pointer;
+}
+.regist{
+    margin: auto auto -2em 1em;
+}
+.regist input{
+    width: 5em;
+    height: 2.5em;
+    font-size: 15px;
+    cursor: pointer;
+}

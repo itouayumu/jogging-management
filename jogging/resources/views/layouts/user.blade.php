@@ -24,6 +24,7 @@
                                     </form>
                                 </div>
         </div>
+
     </header>
 @section('content')
     
