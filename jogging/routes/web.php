@@ -1,10 +1,11 @@
 <?php
 
-
-
-use App\Http\Controllers\joggingController;
-
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\joggingcontroller;
 use App\Http\Controllers\mypage_update;
+Route::get('/', function () {
+    return view('auth.login');
+});
 
 
 
@@ -19,6 +20,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('index',[joggingcontroller::class,'index']);
 Route::get('top',[joggingcontroller::class,'top']);
 Route::get('sab',[joggingcontroller::class,'sab']);
+Route::get('data_regist',[joggingcontroller::class,'data_regist']);
+Route::post('data_regist',[joggingcontroller::class,'data_regist_result']);
 Route::get('data',[joggingcontroller::class,'data']);
 
 
