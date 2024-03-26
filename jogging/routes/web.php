@@ -1,16 +1,26 @@
 <?php
 
 
+
 use App\Http\Controllers\joggingController;
 
 use App\Http\Controllers\mypage_update;
 
 
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Auth::routes();
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('index',[joggingcontroller::class,'index']);
+Route::get('top',[joggingcontroller::class,'top']);
+Route::get('sab',[joggingcontroller::class,'sab']);
+Route::get('data',[joggingcontroller::class,'data']);
+
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
