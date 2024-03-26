@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'k-font';
+    src: url("../font/keifont.woff") format("woff");
+}
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'k-font';
+}
+.header{
+    display: flex;
+    background-color: aquamarine;
+    padding: 10px 0 10px 0;
+}
+.menu{
+    display: flex;
+    position: absolute;
+    right: 50px;
+}
+.title{
+    font-size: 20px;
+}
+.top,.deta,.rank,.hikaku{
+    margin: 0 5px 0 5px;
+    color: black;
+}
+.top{
+    
+}
+.date{
+    
+}
+.rank{
+    
+}
+.hikaku{
+    
+}
+.mypage{
+    
+}
+.logout{
+    
+}
