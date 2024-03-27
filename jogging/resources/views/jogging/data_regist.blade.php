@@ -12,9 +12,12 @@
     データ入力
 </h1>
 <div class="form">
-    <form class="flex" action="" method="post" enctype="multipart/form-data">        
+
+    <form class="flex" action="data_regist" method="post" enctype="multipart/form-data">   
+        @csrf     
+
         <div class="back">
-            <div><a href=""><button>戻る</button></a></div>
+            <div><a href="top"><button type="button">戻る</button></a></div>
         </div>
         <table>
         <tr>
@@ -42,6 +45,17 @@
             </td>
         </tr>
         <tr>
+                <td>
+                    走った環境
+                </td>
+                <td>
+                    <input type="radio" id="huey" name="status" value="0" checked />
+                    <label for="huey">室内</label>
+                    <input type="radio" id="huey" name="status" value="1" />
+                    <label for="huey">室外</label>
+                </td>
+            </tr>
+        <tr>
             <td>
             コース情報を入力
             </td>
@@ -61,9 +75,12 @@
                 <input type="file" name="img" onchange="previewFile(this);">
             </div>
             </td>
+ 
         </tr>
         </table>
-        <div class="regist"><input type="button" name="regist"regist value="登録"></div>
+
+        <div class="regist"><input type="submit" regist value="登録"></div>
+
     </form>
 </div>
 
