@@ -5,6 +5,7 @@
 </head>
 <body>
     <header class="header">
+
         <p class="title">ジョギ管</p>
         <div class=menu>
             <p class="top"><a href="#">top</a></p>
@@ -24,6 +25,7 @@
                                     </form>
                                 </div>
         </div>
+
 
     </header>
 @section('content')

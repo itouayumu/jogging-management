@@ -1,10 +1,15 @@
 <?php
 
 
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\mypagecontroller;
+
+
 
 use App\Http\Controllers\joggingController;
 
 use App\Http\Controllers\mypage_update;
+
 
 
 
@@ -16,6 +21,9 @@ Auth::routes();
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('mypage',[mypagecontroller::class,'mypage']);
+
 Route::get('index',[joggingcontroller::class,'index']);
 Route::get('top',[joggingcontroller::class,'top']);
 Route::get('sab',[joggingcontroller::class,'sab']);
@@ -31,3 +39,4 @@ Route::get('data_regist',[joggingController::class,'data_regist']);
 // Route::post('img',[test::class,'img']);
 
 Route::get('update',[mypage_update::class,'update']);
+
