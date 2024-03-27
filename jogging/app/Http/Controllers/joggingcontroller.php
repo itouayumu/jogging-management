@@ -3,14 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+
 
 class joggingController extends Controller
 {
     //
     public function data_regist(){
        return view('jogging.data_regist');
+
     }
     public function index()
     {
@@ -62,4 +65,5 @@ class joggingController extends Controller
             }
 
 }
+
 

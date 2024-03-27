@@ -16,8 +16,8 @@ body {
     align-items: flex-start;
     width: 65%;
     max-width: 1000px;
-    margin-top: 20px;
     margin: 200px;
+    margin-top: 50px;
 }
 
 .box {
