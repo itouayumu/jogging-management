@@ -27,8 +27,12 @@ class joggingController extends Controller
     public function data(Request $request)
     {
         $queryParameters = $request->query();
-        $items = DB :: table('data')->where('created_at',$queryParameters)->first();
-        return view('joging.sab',['data'=>$items]);
+        $item = DB :: table('data')->where('run_day',$queryParameters)->select('id')->first();
+        if ($item === null) {
+            return redirect('top');
+        }
+        $items = DB :: table('data')->where('run_day',$queryParameters)->first();
+        return view('joging.datal',['data'=>$items]);
     }
     
     public function data_regist_result(Request $request)
