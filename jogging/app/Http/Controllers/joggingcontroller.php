@@ -24,6 +24,12 @@ class joggingController extends Controller
     {
         return view('joging.sab');
     }
+    public function data_regist(){
+        return view('jogging.data_regist');
+    }
+    public function trivia(){
+        return view('trivia.trivia');
+    }
     public function data(Request $request)
     {
         $queryParameters = $request->query();

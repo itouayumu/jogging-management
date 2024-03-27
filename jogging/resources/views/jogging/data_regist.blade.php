@@ -15,7 +15,7 @@
     <form class="flex" action="data_regist" method="post" enctype="multipart/form-data">   
         @csrf     
         <div class="back">
-            <div><a href=""><button>戻る</button></a></div>
+            <div><a href=""><button type="button">戻る</button></a></div>
         </div>
         <table>
         <tr>
@@ -76,7 +76,9 @@
  
         </tr>
         </table>
+
         <div class="regist"><input type="submit" regist value="登録"></div>
+
     </form>
 </div>
 
