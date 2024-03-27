@@ -4,15 +4,17 @@
 @section('css')
 <link rel="stylesheet" href="{{ asset('/css/calendar.css') }}">
 @section('content')
-<div class="calendar">
 <body>
-<h2>カレンダー</h2>
-<div id="calendar"></div>
+    <div class="back">
+        <h2>カレンダー</h2>
+        <div class="calendar">
+            <div id="calendar"></div>
+</div>
 <label for="year">西暦:</label>
-<input type="number" id="year" name="year" value="2024">
-<label for="month">月:</label>
-<input type="number" id="month" name="month" min="1" max="12" value="3" onchange="showOtherMonthCalendar()">
-<button onclick="showOtherMonthCalendar()">表示</button>
+<input type="number" id="year" name="year" value="{{ date('Y') }}">
+    <label for="month">月:</label>
+    <input type="number" id="month" name="month" min="1" max="12" value="{{ date('n') }}" onchange="showOtherMonthCalendar()">
+
 
 <script>
     // カレンダーを表示する関数
@@ -20,7 +22,7 @@
         const daysInMonth = new Date(year, month + 1, 0).getDate();
         const firstDayIndex = new Date(year, month, 1).getDay();
         const lastDayIndex = new Date(year, month, daysInMonth).getDay();
-
+        
         const weekdays = ["日", "月", "火", "水", "木", "金", "土"];
 
         const calendar = document.getElementById("calendar");
@@ -30,7 +32,7 @@
             html += "<th>" + day + "</th>";
         });
         html += "</tr><tr>";
-
+        
         // 空白セルを追加
         for (let i = 0; i < firstDayIndex; i++) {
             html += "<td></td>";
@@ -62,7 +64,7 @@
         }
 
         html += "</tr></table>";
-
+        
         calendar.innerHTML = html;
     }
 
@@ -70,17 +72,14 @@
     function showOtherMonthCalendar() {
         const year = parseInt(document.getElementById("year").value);
         const month = parseInt(document.getElementById("month").value) - 1; // 月は0から始まるため
-
+        
         showCalendar(year, month);
     }
-
+    
     // 初期表示
     showOtherMonthCalendar();
 </script>
-
-
-<!-- フォームを追加 -->
-
+</div>
 @endsection
 
 

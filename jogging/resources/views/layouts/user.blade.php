@@ -6,7 +6,7 @@
 <body>
     <header class="header">
 
-        <p class="title">ジョギング管理アプリケーション</p>
+        <p class="title"><a href="top">ジョギング管理アプリケーション</a></p>
         <div class=menu>
             <p class="top"><a href="top">Top</a></p>
             <p class="date"><a href="data_regist">データ入力</a></p>
