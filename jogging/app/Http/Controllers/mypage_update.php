@@ -11,4 +11,9 @@ class mypage_update extends Controller
     {
         return view('jogging.mydate_update');
     }
+
+    public function date_comparison() 
+    {
+        return view('comparison.date_comparison');
+    }
 }
