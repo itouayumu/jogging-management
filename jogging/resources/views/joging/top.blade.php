@@ -8,6 +8,11 @@
 <body>
 <h2>カレンダー</h2>
 <div id="calendar"></div>
+<label for="year">西暦:</label>
+<input type="number" id="year" name="year" value="2024">
+<label for="month">月:</label>
+<input type="number" id="month" name="month" min="1" max="12" value="3" onchange="showOtherMonthCalendar()">
+<button onclick="showOtherMonthCalendar()">表示</button>
 
 <script>
     // カレンダーを表示する関数
@@ -73,13 +78,9 @@
     showOtherMonthCalendar();
 </script>
 
+
 <!-- フォームを追加 -->
-<label for="year">西暦:</label>
-<input type="number" id="year" name="year" value="2024">
-<label for="month">月:</label>
-<input type="number" id="month" name="month" min="1" max="12" value="3">
-<button onclick="showOtherMonthCalendar()">表示</button>
-</div>
+
 @endsection
 
 
