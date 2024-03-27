@@ -1,0 +1,20 @@
+.date_1 {
+    display: flex;
+    padding: 70px;
+}
+
+.date_2 {
+    padding: 70px;
+}
+
+.date_1 a {
+    margin-left: 800px;
+    text-decoration-line: none;
+    color: black;
+}
+
+button {
+    margin-top: 50px;
+    width: 70px;
+    margin-left: 1000px;
+}

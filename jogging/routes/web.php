@@ -31,3 +31,5 @@ Route::get('data_regist',[joggingController::class,'data_regist']);
 // Route::post('img',[test::class,'img']);
 
 Route::get('update',[mypage_update::class,'update']);
+
+Route::get('date_comparison',[mypage_update::class,'date_comparison']);
