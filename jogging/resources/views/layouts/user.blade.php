@@ -6,13 +6,13 @@
 <body>
     <header class="header">
 
-        <p class="title">ジョギ管</p>
+        <p class="title">ジョギング管理アプリケーション</p>
         <div class=menu>
-            <p class="top"><a href="#">top</a></p>
+            <p class="top"><a href="#">Top</a></p>
             <p class="date"><a href="#">データ入力</a></p>
             <p class="rank"><a href="#">ランキング</a></p>
             <p class="hikaku"><a href="#">データ比較</a></p>
-            <p class="mypage"><a href="#">mypage</a></p>
+            <p class="mypage"><a href="#">Mypage</a></p>
             <div class="logout" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
