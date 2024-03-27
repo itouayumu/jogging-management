@@ -12,10 +12,12 @@
     データ入力
 </h1>
 <div class="form">
+
     <form class="flex" action="data_regist" method="post" enctype="multipart/form-data">   
         @csrf     
+
         <div class="back">
-            <div><a href=""><button type="button">戻る</button></a></div>
+            <div><a href="top"><button type="button">戻る</button></a></div>
         </div>
         <table>
         <tr>
