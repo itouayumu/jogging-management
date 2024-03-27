@@ -1,11 +1,13 @@
 <?php
 
 
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\mypagecontroller;
 
 
 use App\Http\Controllers\joggingController;
+
 
 use App\Http\Controllers\mypage_update;
 Route::get('/', function () {
