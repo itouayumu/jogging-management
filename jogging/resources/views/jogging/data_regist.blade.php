@@ -14,7 +14,7 @@
 <div class="form">
     <form class="flex" action="" method="post" enctype="multipart/form-data">        
         <div class="back">
-            <div><a href=""><button>戻る</button></a></div>
+            <div><a href=""><button type="button">戻る</button></a></div>
         </div>
         <table>
         <tr>
@@ -63,7 +63,7 @@
             </td>
         </tr>
         </table>
-        <div class="regist"><input type="button" name="regist"regist value="登録"></div>
+        <div class="regist"><input type="submit" name="regist" value="登録"></div>
     </form>
 </div>
 
