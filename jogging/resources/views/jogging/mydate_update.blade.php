@@ -34,8 +34,8 @@
         <div class="box">
             <h2>目標設定</h2>
             <div class="info-box">
-                <input type="checkbox" name="diet">ダイエット
-                <input type="checkbox" name="health">健康維持
+               <input type="checkbox">ダイエット 
+               <input type="checkbox">健康維持
             </div>
         </div>
         <div class="box">
@@ -50,6 +50,7 @@
                 <input type="number">cm
             </div>
         </div>
+
         <button class="edit-button">編集完了</button>
         <a href="mypage"><button class="top-button">戻る</button></a>
     </div>
