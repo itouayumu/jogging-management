@@ -1,9 +1,10 @@
 @extends('layouts.user')
 
-@section('title','Index')
+@section('title', 'Index')
 @section('css')
 <link rel='stylesheet' href="{{ asset('/css/mypage.css')}}">
 @section('content')
+<h1>アカウント情報</h1>
 <div class="container">
     <div class="content1">
     
@@ -53,8 +54,8 @@
                 <p>21.6</p>
             </div>
         </div>
-        <button class="edit-button">編集</button>
-        <button class="top-button">戻る</button>
+        <a href="update"><button class="edit-button">編集</button></a>
+        <a href="top"><button class="top-button">戻る</button></a>
     </div>
 </div>
 @endsection

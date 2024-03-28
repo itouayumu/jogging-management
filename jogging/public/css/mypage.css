@@ -16,8 +16,10 @@ body {
     align-items: flex-start;
     width: 65%;
     max-width: 1000px;
-    margin: 200px;
+
+    margin: auto;
     margin-top: 50px;
+
 }
 
 .box {
@@ -66,4 +68,10 @@ body {
 /* 体重からBMIまでを画面の左側に配置 */
 .box:nth-child(n+6) {
     order: 1; /* 順序を変更 */
+}
+
+h1 {
+    margin: auto;
+    margin-top: 50px;
+    margin-left: 250px;
 }
