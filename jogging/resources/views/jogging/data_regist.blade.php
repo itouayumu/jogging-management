@@ -51,8 +51,8 @@
                 <td>
                     <input type="radio" id="huey" name="status" value="0" checked />
                     <label for="huey">室内</label>
-                    <input type="radio" id="huey" name="status" value="1" />
-                    <label for="huey">室外</label>
+                    <input type="radio" id="out" name="status" value="1" />
+                    <label for="out">室外</label>
                 </td>
             </tr>
         <tr>
