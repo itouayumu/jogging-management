@@ -16,10 +16,6 @@
             <p>John Doe</p>
         </div>
         <div class="box">
-            <h2>ランキング</h2>
-            <p>1st</p>
-        </div>
-        <div class="box">
             <h2>メールアドレス</h2>
             <div class="info-box">
                 <p>john@example.com</p>
@@ -61,7 +57,6 @@
         <button class="top-button">戻る</button>
     </div>
 </div>
-<p>testtets</p>
 @endsection
 
 

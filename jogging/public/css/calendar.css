@@ -1,4 +1,17 @@
+
+.selecter{
+    position: fixed;
+    left: 70px;
+    top: 100px;
+    
+}
+.title_calender{
+    position: fixed;
+    left: 150px;
+    top: 60px;
+}
 table {
+    background-color: white;
     border-collapse: collapse;
     width: 50%;
 }
@@ -19,6 +32,9 @@ th, td {
     font-family: 'k-font';
     src: url("../font/GN-Koharuiro_Sunray.woff") format("woff");
 }
+th{
+    font-size: 30px;
+}
 .calendar{
     position: fixed;
     top: 150px;
@@ -36,5 +52,5 @@ th, td {
     transition:0.3s;
 }
 .calendar td:hover{
-	background-color: rgba(0, 255, 255, 0.306);
+	background-color: rgba(0, 255, 255, 0.144);
 }

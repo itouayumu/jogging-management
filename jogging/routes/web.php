@@ -34,6 +34,7 @@ Route::get('sab',[joggingcontroller::class,'sab']);
 Route::get('data_regist',[joggingcontroller::class,'data_regist']);
 Route::post('data_regist',[joggingcontroller::class,'data_regist_result']);
 Route::get('data',[joggingcontroller::class,'data']);
+Route::get('data_update',[joggingcontroller::class,'data_update']);
 
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

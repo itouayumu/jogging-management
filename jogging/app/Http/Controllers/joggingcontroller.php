@@ -12,7 +12,8 @@ class joggingController extends Controller
 {
     //
     public function data_regist(){
-       return view('jogging.data_regist');
+        $area = DB :: table('area')->get();
+       return view('jogging.data_regist',['data'=>$area]);
 
     }
     public function index()
@@ -44,11 +45,18 @@ class joggingController extends Controller
     
     public function data_regist_result(Request $request)
     {
+        $item = DB :: table('area')->where('name',$request->area)->select('id')->first();
+        if ($item === null) {
+            $area_param =[
+                'name'=>$request->area,
+            ];
+            DB::table('area')->insert($area_param);
+        }
         $user = Auth::user()->name;
         $run = $request->run;
         $time = $request->time;
-        $area = $request->area;
         $status = $request->status;
+        $area = $request->area;
         $day=now()->format('Y年m月d日');
         $img_name = $user.'_'.$day.'.jpeg';
         $request->file('img')->storeAs('public/img', $img_name);
@@ -62,6 +70,14 @@ class joggingController extends Controller
         ];
         DB::table('data')->insert($param);
         return redirect('/top');
+            }
+            public function data_update(Request $request)
+            {
+                $area = DB :: table('area')->get();
+                $user_id = Auth::id();
+                $day = $request->query();
+                $item = DB :: table('data')->where('user_id',$user_id)->where('run_day',$day)->first();
+                return view('jogging.data_update',['data'=>$item,'area'=>$area]);
             }
 
 }

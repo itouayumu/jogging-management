@@ -1,16 +1,22 @@
 @font-face {
-    font-family: 'k-font';
-    src: url("../font/GN-Koharuiro_Sunray.woff") format("woff");
+    font-family: 'nikofont';
+    src: url("../font/ロゴたいぷゴシック.woff") format("woff");
 }
 *{
+    font-family: 'nikofont';
     margin: 0%;
     padding: 0%;
 
+
 }
+
 .header{
     display: flex;
-    background-color: aquamarine;
+   background-image: url("../img/header.png");
     padding: 10px 0 10px 0;
+}
+body{
+    background-color: rgb(247, 252, 255);
 }
 .menu{
     display: flex;
@@ -20,8 +26,10 @@
 .title{
     margin-left: 10px;
     font-size: 20px;
+    color: black;
+    text-decoration: none;
 }
-.top,.date,.rank,.hikaku,.mypage,.logout{
+.top,.date,.rank,.hikaku,.mypage,.logout,.nav-link{
     margin: 0 10px 0 10px;
     & a{
         color: black;
@@ -33,21 +41,11 @@
         text-decoration-thickness: 3px;
     }
 }
-.top{
-    
-}
-.date{
-    
-}
-.rank{
-    
-}
-.hikaku{
-    
-}
-.mypage{
-    
-}
-.logout{
-    
+.back{
+    width: 300px;
+    height: auto;
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    z-index: 0;
 }

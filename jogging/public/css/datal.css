@@ -1,0 +1,64 @@
+.j_img{
+    margin-top: 70px;
+    height: 400px;
+    width: auto;
+    border: 15px solid #bcbcbc;
+    position: absolute;
+    z-index: 1;
+    border-radius: 10px;
+    margin-left: 350px;
+}
+.layout{
+    display: flex;
+}
+.data{
+
+    margin-top: 30px;
+    margin-left: 20px;
+    font-size: 30px;
+}
+.data_1{
+    background-color: #bcbcbc;
+    margin-top: 70px;
+    margin-left: 150px;
+    border-radius: 10px;
+    padding: 50px;
+    margin-bottom: 70px;
+
+}
+.data_1 p{
+    margin-bottom: 10px;
+}
+.back_a {
+    margin-top: 50px;
+    margin-left: 100px;
+    transition: .3s; /* 変化時間 0.3秒 */
+    padding: 24px 48px; /* 内側の余白設定 */
+    border-radius: 12px; /* 要素の角を丸くする */
+    background-color: #2ecadf; /* 背景色指定 */
+    text-decoration: none; /* aタグの下線を非表示に */
+    color: #fff; /* 文字色 */
+    font-size: 1.5rem; /* フォントサイズ */
+  }
+  
+  .back_a:hover { 
+    transition: .3s; /* 変化時間 0.3秒 */
+    background-color: #00a9de; /* 背景色 */
+  }
+  .update {
+    margin-top: 50px;
+    margin-left: 180px;
+    transition: .3s; /* 変化時間 0.3秒 */
+    padding: 24px 48px; /* 内側の余白設定 */
+    border-radius: 12px; /* 要素の角を丸くする */
+    background-color: #2ecadf; /* 背景色指定 */
+    text-decoration: none; /* aタグの下線を非表示に */
+    color: #fff; /* 文字色 */
+    font-size: 1.5rem; /* フォントサイズ */
+  }
+  
+  .update:hover { 
+    transition: .3s; /* 変化時間 0.3秒 */
+    background-color: #00a9de; /* 背景色 */
+  }
+

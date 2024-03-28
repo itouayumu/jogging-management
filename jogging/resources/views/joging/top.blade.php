@@ -6,14 +6,16 @@
 @section('content')
 <body>
     <div class="back">
-        <h2>カレンダー</h2>
-        <div class="calendar">
-            <div id="calendar"></div>
-</div>
-<label for="year">西暦:</label>
-<input type="number" id="year" name="year" value="{{ date('Y') }}">
-    <label for="month">月:</label>
-    <input type="number" id="month" name="month" min="1" max="12" value="{{ date('n') }}" onchange="showOtherMonthCalendar()">
+        <div class=selecter>
+            <h2 class="title_calender">カレンダー</h2>
+            <div class="calendar">
+                <div id="calendar"></div>
+        </div>
+            <label for="year">西暦:</label>
+            <input type="number" id="year" name="year" value="{{ date('Y') }}">
+            <label for="month">月:</label>
+            <input type="number" id="month" name="month" min="1" max="12" value="{{ date('n') }}" onchange="showOtherMonthCalendar()">
+    </div>
 
 
 <script>
@@ -68,18 +70,22 @@
         calendar.innerHTML = html;
     }
 
-    // カレンダーを表示する関数を呼び出す
-    function showOtherMonthCalendar() {
-        const year = parseInt(document.getElementById("year").value);
-        const month = parseInt(document.getElementById("month").value) - 1; // 月は0から始まるため
-        
-        showCalendar(year, month);
-    }
+   // カレンダーを表示する関数を呼び出す
+function showOtherMonthCalendar() {
+    const year = parseInt(document.getElementById("year").value);
+    const month = parseInt(document.getElementById("month").value) - 1; // 月は0から始まるため
     
-    // 初期表示
-    showOtherMonthCalendar();
+    showCalendar(year, month);
+}
+
+// 初期表示
+showOtherMonthCalendar();
+
+// 年の入力フィールドが変更されたときにカレンダーを更新する
+document.getElementById("year").addEventListener("change", showOtherMonthCalendar);
 </script>
 </div>
+<div id="iddf545fcb055a6" a='{"t":"g7bs","v":"1.2","lang":"ja","locs":[],"ssot":"c","sics":"ds","cbkg":"#FFFFFF","cfnt":"#000000","cend":"#FFFFFF00"}'><a href="https://sharpweather.com/widgets/">Weather widget html for website by sharpweather.com</a></div><script async src="https://static1.sharpweather.com/widgetjs/?id=iddf545fcb055a6"></script>
 @endsection
 
 

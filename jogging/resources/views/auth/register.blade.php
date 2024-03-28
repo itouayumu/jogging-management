@@ -5,10 +5,10 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
-
+                
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
+                        <div class="card-header">{{ __('Register') }}</div>
                         @csrf
 
                         <div class="row mb-3">
@@ -43,7 +43,7 @@
                         
                                                 <!-- 性別の入力欄 -->
                         <div class="row mb-3">
-                            <label for="gender" class="col-md-4 col-form-label text-md-end">Gender</label>
+                            <label for="gender" class="col-md-4 col-form-label text-md-end">性別</label>
 
                             <div class="col-md-6" style="padding-top: 8px">
                                 <input id="gender-m" type="radio" name="gender" value="0"class="gender">
@@ -63,7 +63,7 @@
 
                         <!-- 年齢の入力欄 -->
                         <div class="row mb-3">
-                            <label for="age" class="col-md-4 col-form-label text-md-end">Age</label>
+                            <label for="age" class="col-md-4 col-form-label text-md-end">年齢</label>
 
                             <div class="col-md-6">
                                 <input id="age" type="number" min="1" class="form-control{{ $errors->has('age') ? ' is-invalid' : '' }}" name="age" value="{{ old('age') }}" required>
@@ -89,19 +89,20 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('確認用Password') }}</label>
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
-
+                        <div class="log_layout">
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn login_btn">
                                     {{ __('Register') }}
                                 </button>
                             </div>
+                        </div>
                         </div>
                     </form>
                 </div>
