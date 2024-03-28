@@ -33,6 +33,7 @@ Route::get('top',[joggingcontroller::class,'top']);
 Route::get('sab',[joggingcontroller::class,'sab']);
 Route::get('data_regist',[joggingcontroller::class,'data_regist']);
 Route::post('data_regist',[joggingcontroller::class,'data_regist_result']);
+Route::post('update_mypage',[MypageUpdateController::class,'updatet_mypage']);
 Route::get('data',[joggingcontroller::class,'data']);
 
 

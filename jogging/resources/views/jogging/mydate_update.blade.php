@@ -6,12 +6,14 @@
 
 @section('content')
 <h1>アカウント情報</h1>
+<form action="update_mypage" method="post" enctype="multipart/form-data">
 <div class="container">
     <div class="content1">
     
         <div class="box">
             <h2>アイコン</h2>
-            <img src="" alt="Icon" width="100">
+            <img id="preview" src="" alt="Icon" width="100">
+            <input type="file" name="img" onchange="previewFile(this);">
         </div>
         <div class="box">
             <h2>アカウント名</h2>
@@ -20,7 +22,7 @@
         <div class="box">
             <h2>メールアドレス</h2>
             <div class="info-box">
-                <input type="text">
+                <input type="e-mail">
             </div>
         </div>
         <div class="box">
@@ -55,4 +57,17 @@
         <a href="mypage"><button class="top-button">戻る</button></a>
     </div>
 </div>
+</form>
+
+<script>
+    function previewFile(hoge){
+    var fileData = new FileReader();
+    fileData.onload = (function() {
+      //id属性が付与されているimgタグのsrc属性に、fileReaderで取得した値の結果を入力することで
+      //プレビュー表示している
+      document.getElementById('preview').src = fileData.result;
+    });
+    fileData.readAsDataURL(hoge.files[0]);
+  }
+</script>
 @endsection
