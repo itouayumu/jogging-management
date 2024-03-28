@@ -54,7 +54,7 @@
         </div>
 
         <button class="edit-button">編集完了</button>
-        <a href="mypage"><button class="top-button">戻る</button></a>
+        <a href="mypage"><button class="top-button" type="button">戻る</button></a>
     </div>
 </div>
 </form>
