@@ -2,6 +2,7 @@
 
 
 
+use App\Http\Controllers\MypageUpdateController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\mypagecontroller;
 
@@ -33,7 +34,8 @@ Route::get('top',[joggingcontroller::class,'top']);
 Route::get('sab',[joggingcontroller::class,'sab']);
 Route::get('data_regist',[joggingcontroller::class,'data_regist']);
 Route::post('data_regist',[joggingcontroller::class,'data_regist_result']);
-Route::post('update_mypage',[MypageUpdateController::class,'updatet_mypage']);
+Route::get('mydate_update',[MypageUpdateController::class,'update_mypage']);
+Route::post('mydate_update',[MypageUpdateController::class,'update_mypage']);
 Route::get('data',[joggingcontroller::class,'data']);
 Route::get('data_update',[joggingcontroller::class,'data_update']);
 

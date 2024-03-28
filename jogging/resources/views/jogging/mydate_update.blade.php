@@ -17,18 +17,18 @@
         </div>
         <div class="box">
             <h2>アカウント名</h2>
-            <input type="text">
+            <input type="text" name="name">
         </div>
         <div class="box">
             <h2>メールアドレス</h2>
             <div class="info-box">
-                <input type="e-mail">
+                <input type="e-mail" name="mail">
             </div>
         </div>
         <div class="box">
             <h2>年齢</h2>
             <div class="info-box">
-                <input type="number">歳
+                <input type="number" name="age">歳
             </div>
         </div>
         </div>
@@ -36,24 +36,26 @@
         <div class="box">
             <h2>目標設定</h2>
             <div class="info-box">
-               <input type="checkbox">ダイエット 
-               <input type="checkbox">健康維持
+               <input type="radio" name="radio" id=diet value="0">
+               <label for="diet">ダイエット</label> 
+               <input type="radio" name="radio" id=health value="1">
+               <label for="health">健康維持</label>
             </div>
         </div>
         <div class="box">
             <h2>体重</h2>
             <div class="info-box">
-                <input type="number">kg
+                <input type="number" name="weight">kg
             </div>
         </div>
         <div class="box">
             <h2>身長</h2>
             <div class="info-box">
-                <input type="number">cm
+                <input type="number" name="tall">cm
             </div>
         </div>
 
-        <button class="edit-button">編集完了</button>
+        <button class="edit-button" type=submit>編集完了</button>
         <a href="mypage"><button class="top-button" type="button">戻る</button></a>
     </div>
 </div>
