@@ -68,7 +68,7 @@ td{
  width: 200px;
  background-color: rgb(255, 255, 255);
 }
-.log_a ,.login_btn{
+.log_a ,.login_btn,.back_btn,.update_btn{
     transition: .3s; /* 変化時間 0.3秒 */
     padding: 10px 10px; /* 内側の余白設定 */
     border-radius: 12px; /* 要素の角を丸くする */
@@ -78,7 +78,19 @@ td{
     font-size: 17px; /* フォントサイズ */
     border: none;
   }
-  .log_a:hover,.login_btn:hover { 
+  .log_a:hover,.login_btn:hover,.back_btn:hover,.update_btn:hover { 
     transition: .3s; /* 変化時間 0.3秒 */
     background-color: #00a9de; /* 背景色 */
+  }
+  .back_btn{
+    margin-right: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+  }
+  .update_btn{
+    margin-right: 10em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
   }

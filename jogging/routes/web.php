@@ -38,6 +38,7 @@ Route::get('mydate_update',[MypageUpdateController::class,'update_mypage']);
 Route::post('mydate_update',[MypageUpdateController::class,'update_mypage']);
 Route::get('data',[joggingcontroller::class,'data']);
 Route::get('data_update',[joggingcontroller::class,'data_update']);
+Route::post('data_update',[joggingcontroller::class,'data_update_result']);
 
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

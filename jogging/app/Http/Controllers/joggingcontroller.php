@@ -57,7 +57,7 @@ class joggingController extends Controller
         $time = $request->time;
         $status = $request->status;
         $area = $request->area;
-        $day=now()->format('Y年m月d日');
+        $day = $request->run_day;
         $img_name = $user.'_'.$day.'.jpeg';
         $request->file('img')->storeAs('public/img', $img_name);
         $param =[
@@ -66,7 +66,8 @@ class joggingController extends Controller
             'time'=>$time,
             'address'=>$area,
             'statusflag'=>$status,
-            'img_pass'=>$img_name
+            'img_pass'=>$img_name,
+            'run_day'=>$day,
         ];
         DB::table('data')->insert($param);
         return redirect('/top');
@@ -78,6 +79,39 @@ class joggingController extends Controller
                 $day = $request->query();
                 $item = DB :: table('data')->where('user_id',$user_id)->where('run_day',$day)->first();
                 return view('jogging.data_update',['data'=>$item,'area'=>$area]);
+            }
+            public function data_update_result(Request $request)
+            {
+     
+        $user = Auth::user()->name;
+        $id = Auth::user()->id;
+        $run = $request->run;
+        $time = $request->time;
+        $status = $request->status;
+        $area = $request->area;
+        $day = $request->run_day;
+        $img_name = $user.'_'.$day.'.jpeg';
+        if ( $request->file('img')===null) {
+            $param =[
+                'user_id'=>Auth::user()->id,
+                'distance'=>$run,
+                'time'=>$time,
+                'address'=>$area,
+                'statusflag'=>$status,
+            ];
+        } else{
+            $request->file('img')->storeAs('public/img', $img_name);
+            $param =[
+                'user_id'=>Auth::user()->id,
+                'distance'=>$run,
+                'time'=>$time,
+                'address'=>$area,
+                'statusflag'=>$status,
+                'img_pass'=>$img_name,
+            ];
+        }
+        DB::table('data')->where('run_day',$day)->where('user_id',$id)->update($param);
+        return redirect('/top');
             }
 
 }

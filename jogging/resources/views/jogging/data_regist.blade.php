@@ -61,6 +61,14 @@
     </tr>
     <tr>
         <td>
+            走った日付
+        </td>
+        <td>
+            <input type="date"name="run_day">
+        </td>
+    </tr>
+    <tr>
+        <td>
 
             コース情報を入力
         </td>

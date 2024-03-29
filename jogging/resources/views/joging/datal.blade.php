@@ -7,10 +7,10 @@
 <h1>ジョギングデータ</h1>
 <div class="layout">
     <div class="data_1">
-        @if($data->status = 0)
+        @if($data->	statusflag === 0)
         <p class="status1"style= "background-color:aquamarine; text-align: center; border-radius: 5px;padding: 20px;">室内</p>
         @else
-        <p class="status2" style="background-color:aqua;text-align: center; border-radius: 10px;padding: 5px;">室外</p>
+        <p class="status2" style="background-color:aqua;text-align: center; border-radius: 5px;padding: 20px;">室外</p>
         @endif
         <div>
             <div class="data">

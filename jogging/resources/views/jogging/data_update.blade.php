@@ -11,7 +11,7 @@
 
 <div class="form">
 
-    <form class="flex" action="data_regist" method="post" enctype="multipart/form-data">   
+    <form class="flex" action="data_update" method="post" enctype="multipart/form-data">   
         @csrf     
         <div class="back">
             <div><a href="top"><button type="button">戻る</button></a></div>
@@ -24,7 +24,7 @@
                         走行距離
                     </td>
                     <td>
-                        <div class="run"><input type="text" name="run">km</div>
+                        <div class="run"><input type="text" name="run"value="{{$data->distance}}">km</div>
                     </td>
                 </tr>
                 <tr>
@@ -32,7 +32,7 @@
                         時間
                     </td>
                     <td>
-                        <div class="time"><input type="text" name="time">時間</div>
+                        <div class="time"><input type="text" name="time"value="{{$data->time}}">時間</div>
                     </td>
                 </tr>
                 <tr>
@@ -40,7 +40,7 @@
                         走った地域
                     </td>
                     <td>
-                        <input type="text" name="area" list="area"  autocomplete="off">
+                        <input type="text" name="area" list="area"  autocomplete="off"value="{{$data->address}}">
                         <datalist id="area">
             @foreach ($area as $item)
             <option value='{{$item->name}}'>
@@ -59,6 +59,8 @@
             <label for="huey">室外</label>
         </td>
     </tr>
+   
+            <input type="hidden"name="run_day"value="{{$data->run_day}}">
     <tr>
         <td>
             コース情報を入力
@@ -83,8 +85,10 @@
         </tr>
     </table>
     
-    <div class="regist"><input type="submit"class="login_btn" regist value="更新"></div>
-    <button type="button" onclick="history.back()" class="back">前のページへ戻る</button>
+    <div class="regist">
+        <button type="button" onclick="history.back()" class="back_btn">前のページへ戻る</button>
+        <input type="submit"class="update_btn" regist value="更新">
+</div>
 </div>
     
 </form>
